@@ -13,6 +13,9 @@ class SignIn extends React.Component {
             password:''
         }
     }
+        SignInNavigate = () => {
+        this.props.history.push("/");
+        };
 
         handleSubmit = async event => {
             event.preventDefault();
@@ -22,6 +25,7 @@ class SignIn extends React.Component {
             try {
                 await auth.signInWithEmailAndPassword(email,password);
                 this.setState({email:'',password:''});
+                this.SignInNavigate();
             } catch (error) {
                 console.log(error);
             }
@@ -54,7 +58,7 @@ class SignIn extends React.Component {
                     required />
                     <div className='buttons'>
                       <CustomButton type="submit">SIGN IN</CustomButton>
-                      <CustomButton onClick={SignInWithGoogle} isGoogleSignin>Sign in with google</CustomButton>
+                      <CustomButton type='button'onClick={SignInWithGoogle} isGoogleSignin>Sign in with google</CustomButton>
                     </div>
                 </form>
             </div>
