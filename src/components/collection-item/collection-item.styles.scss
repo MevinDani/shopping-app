@@ -30,6 +30,11 @@
     position: absolute;
     top: 255px;
     display: none;
+
+    &:active {
+      opacity: 0.4;
+      display: flex;
+    }
   }
 
   .collection-footer {
