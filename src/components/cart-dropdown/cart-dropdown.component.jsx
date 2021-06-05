@@ -20,10 +20,16 @@ const CartDropdown = ({cartItems,history,dispatch}) => (
                 <span className='empty-message'>YOUR CART IS EMPTY</span>
             }
         </div>
-        <CustomButton onClick={()=>{
-            history.push('/checkOut');
-            dispatch(toggleCartHidden())
-            }}>GO TO CHECKOUT</CustomButton>
+        {
+            cartItems.length ?
+                <CustomButton onClick={()=>{
+                history.push('/checkOut');
+                dispatch(toggleCartHidden())
+                }}>GO TO CHECKOUT</CustomButton>
+            :
+            null    
+        }
+        
     </div>
 )
 
