@@ -21,6 +21,10 @@ const invertedButtonStyles = css`
       color: white;
       border: none;
     }
+    &:active{
+    background-color: white;
+    color: black;
+  }
 `
 
 const googleSignInStyles = css`
@@ -52,10 +56,16 @@ export const CustomButtonContainer = styled.button`
   text-transform: uppercase;
   font-family: "Farro";
   font-weight: bolder;
-  border: none;
+  border:none;
+  border-radius:10px;
   cursor: pointer;
   display: flex;
   justify-content: center;
+
+   @media screen and (max-width: 390px) {
+    width:auto;
+    font-size:12px;
+  }
 
   ${getButtonStyles}
 `

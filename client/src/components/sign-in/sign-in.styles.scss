@@ -2,13 +2,23 @@
   width: 380px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 30px;
+
+  @media screen and (max-width: 390px) {
+    width: 320px;
+  }
 
   .title {
     margin: 10px 0;
+    text-align: center;
+
+    @media screen and (max-width: 800px) {
+      font-size: 20px;
+    }
   }
 
   .buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 }

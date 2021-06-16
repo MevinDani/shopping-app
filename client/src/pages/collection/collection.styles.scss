@@ -5,6 +5,10 @@
   .title {
     font-size: 38px;
     margin: 0 auto 30px;
+
+    @media screen and (max-width: 800px) {
+      font-size: 25px;
+    }
   }
 
   .items {
@@ -12,8 +16,24 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
 
+    @media screen and (max-width: 800px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      // display: grid;
+      // grid-template-columns: 1fr 1fr;
+      // grid-gap: 10px;
+    }
+
     & .collection-item {
       margin-bottom: 30px;
+
+      .custom-button {
+        @media screen and (max-width: 635px) {
+          font-size: 12px;
+        }
+      }
     }
   }
 }

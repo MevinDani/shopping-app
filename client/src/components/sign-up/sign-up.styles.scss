@@ -3,7 +3,21 @@
   flex-direction: column;
   width: 380px;
 
+  @media screen and (max-width: 390px) {
+    width: 320px;
+  }
+
   .title {
     margin: 10px 0;
+    text-align: center;
+
+    @media screen and (max-width: 800px) {
+      font-size: 20px;
+    }
+  }
+
+  .submit-button {
+    display: flex;
+    justify-content: center;
   }
 }
